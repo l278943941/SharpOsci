@@ -96,7 +96,7 @@ namespace SharpOsci
         {
             using (var openDialog = new OpenFileDialog())
             {
-                openDialog.Filter = "音频文件|*.flac;*.wav";
+                openDialog.Filter = "音频文件|*.flac";
                 if (openDialog.ShowDialog() == DialogResult.OK)
                 {
                     LoadAudioFile(openDialog.FileName);
