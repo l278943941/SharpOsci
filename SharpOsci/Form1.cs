@@ -46,13 +46,17 @@ namespace SharpOsci
             this.SetStyle(ControlStyles.AllPaintingInWmPaint |
               ControlStyles.Opaque, true);
             ShaderCompiler p = new ShaderCompiler();
-            byte[] chadercode = p.CompileComputeShader("Oscilloscope.comp", ShaderKind.ComputeShader);
-            File.WriteAllBytes("Oscilloscope.comp.spv", chadercode);
-            byte[] chadercode1 = p.CompileComputeShader("FullscreenQuad.frag.glsl", ShaderKind.FragmentShader);
-            File.WriteAllBytes("FullscreenQuad.frag.spv", chadercode1);
-            byte[] chadercode2 = p.CompileComputeShader("FullscreenQuad.vert.glsl", ShaderKind.VertexShader);
-            File.WriteAllBytes("FullscreenQuad.vert.spv", chadercode2);
-            AllocConsole();
+
+
+            //byte[] chadercode = p.CompileComputeShader("Oscilloscope.comp", ShaderKind.ComputeShader);
+            //File.WriteAllBytes("Oscilloscope.comp.spv", chadercode);
+            //byte[] chadercode1 = p.CompileComputeShader("FullscreenQuad.frag.glsl", ShaderKind.FragmentShader);
+            //File.WriteAllBytes("FullscreenQuad.frag.spv", chadercode1);
+            //byte[] chadercode2 = p.CompileComputeShader("FullscreenQuad.vert.glsl", ShaderKind.VertexShader);
+            //File.WriteAllBytes("FullscreenQuad.vert.spv", chadercode2);
+
+
+            //AllocConsole();
             InitializeComponent();
             InitializeUI();
             InitializeAudio();
@@ -66,10 +70,10 @@ namespace SharpOsci
             //new XYWaveformRenderer { Dock = DockStyle.Fill };
             //_xyRenderer._renderer = _sdlWindow;
             // 创建播放控制按钮
-            open = new Button { Text = "打开文件", Dock = DockStyle.Top };
+            open = new Button { Text = "打开文件   openfile", Dock = DockStyle.Top };
             open.Click += BtnOpen_Click;
 
-            play = new Button { Text = "播放/暂停", Dock = DockStyle.Top };
+            play = new Button { Text = "播放/暂停    player", Dock = DockStyle.Top };
             play.Click += BtnPlay_Click;
 
             // 布局
