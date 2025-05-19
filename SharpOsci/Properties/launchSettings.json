@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SharpOsci": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
