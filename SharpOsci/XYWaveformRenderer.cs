@@ -175,10 +175,10 @@ namespace SharpOsci
 
 
             //如果使用cppdll的话需要注释掉下面4行
-            //ilgpuRender = new IlgpuRender();
-            //ilgpuRender.xyRenderer = this;
-            //ilgpuRender.setSetings(darwsetings);
-            //ilgpuRender.run();
+            ilgpuRender = new IlgpuRender();
+            ilgpuRender.xyRenderer = this;
+            ilgpuRender.setSetings(darwsetings);
+            ilgpuRender.run();
 
         }
 

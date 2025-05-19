@@ -323,11 +323,11 @@ namespace SharpOsci
                         readpos += samplesRead;
 
                         //cpplib渲染模式 请使用release运行 并且注释 XYWaveformRenderer.cs 178行到181行
-                        _xyRenderer.SetData2(buffer, samplesRead);
+                        //_xyRenderer.SetData2(buffer, samplesRead);
                         //
 
                         //ilgpu渲染模式
-                        //_xyRenderer.ilgpuRender.SetData(buffer, samplesRead);
+                        _xyRenderer.ilgpuRender.SetData(buffer, samplesRead);
                         //
 
                         sw.Stop();
